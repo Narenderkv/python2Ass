@@ -1,0 +1,47 @@
+Solution
+
+def bracket(prtnum): 
+    stk = [] 
+    for char in prtnum: 
+        if char in ["(", "{", "["]: 
+            stk.append(char) 
+        else: 
+            if not stk: 
+                return False
+            input1 = stk.pop() 
+            if input1 == '(': 
+                if char != ")": 
+                    return False
+            if input1 == '{': 
+                if char != "}": 
+                    return False
+            if input1 == '[': 
+                if char != "]": 
+                    return False
+    if stk: 
+        return False
+    return True
+if __name__ == "__main__":
+    dev=input("")
+    prtnum = dev
+    if bracket(prtnum):
+         print("true")
+    else:
+              print("false") 
+
+
+
+After Run 
+
+CASE: 1,2,3
+
+PS E:\nodejs\Dynamicweb_in_nodejs - Copy (2)> python -u "e:\nodejs\Dynamicweb_in_nodejs - Copy (2)\assignmentnarender\question3.py"
+()
+true
+PS E:\nodejs\Dynamicweb_in_nodejs - Copy (2)> python -u "e:\nodejs\Dynamicweb_in_nodejs - Copy (2)\assignmentnarender\question3.py"
+(){}[]
+true
+PS E:\nodejs\Dynamicweb_in_nodejs - Copy (2)> python -u "e:\nodejs\Dynamicweb_in_nodejs - Copy (2)\assignmentnarender\question3.py"
+(]
+false
+PS E:\nodejs\Dynamicweb_in_nodejs - Copy (2)> 
