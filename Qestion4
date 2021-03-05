@@ -1,0 +1,57 @@
+
+
+solution
+
+def NonRepeatvalue(arr, n): 
+    
+
+    mp={} 
+    for i in range(n): 
+        if arr[i] not in mp: 
+            mp[arr[i]]=0
+        mp[arr[i]]+=1
+        
+    
+    for x in mp: 
+        if (mp[x]== 1): 
+            print("\n")
+            print(x,end="\n") 
+            
+            
+            
+
+sub=[]
+ar2=int(input())
+print("\n")
+for i in range(0,ar2):
+    ar=int(input())
+    sub.append(ar)
+
+n = len(sub) 
+NonRepeatvalue(sub, n) 
+
+
+After Run
+CASE 1:
+
+PS E:\nodejs\Dynamicweb_in_nodejs - Copy (2)> python -u "e:\nodejs\Dynamicweb_in_nodejs - Copy (2)\assignmentnarender\question4.py"
+3
+
+2
+2
+1
+
+1
+CASE 2:
+PS E:\nodejs\Dynamicweb_in_nodejs - Copy (2)> python -u "e:\nodejs\Dynamicweb_in_nodejs - Copy (2)\assignmentnarender\question4.py"
+5
+
+
+4
+1
+2
+1
+2
+
+
+4
